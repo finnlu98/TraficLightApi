@@ -11,38 +11,37 @@ const app = express();
 
 
 app.get('/off', (req, res) => {
-    // Render the template file (assuming it's in the 'views' directory)
+
     
     Green.writeSync(1);
     Orange.writeSync(0);
     Red.writeSync(0);
     
-    // Send the values as a response
+  
     res.send("success");
 
 });
 
 
 app.get('/green', (req, res) => {
-    // Render the template file (assuming it's in the 'views' directory)
+
     
     Green.writeSync(1);
     Orange.writeSync(0);
     Red.writeSync(0);
     
-    // Send the values as a response
+
     res.send("success");
 
 });
 
 app.get('/orange', (req, res) => {
-    // Render the template file (assuming it's in the 'views' directory)
     
     Green.writeSync(0);
     Orange.writeSync(1);
     Red.writeSync(0);
     
-    // Send the values as a response
+    
     res.send("success");
 
 });
@@ -53,7 +52,7 @@ app.get('/red', (req, res) => {
     Orange.writeSync(0);
     Red.writeSync(1);
     
-    // Send the values as a response
+  
     res.send("success");
 
 });
