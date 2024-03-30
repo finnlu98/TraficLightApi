@@ -13,7 +13,7 @@ const app = express();
 app.get('/off', (req, res) => {
 
     
-    Green.writeSync(1);
+    Green.writeSync(0);
     Orange.writeSync(0);
     Red.writeSync(0);
     
