@@ -1,5 +1,6 @@
 
 const express = require('express'); 
+const cors = require('cors');
  
 var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
 var Green = new Gpio(17, 'out'); //use GPIO pin 4, and specify that it is output
@@ -8,6 +9,7 @@ var Red = new Gpio(22, 'out'); //use GPIO pin 4, and specify that it is output
 
 
 const app = express();
+app.use(cors());
 
 
 app.get('/off', (req, res) => {
